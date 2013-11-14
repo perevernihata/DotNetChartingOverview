@@ -23,6 +23,7 @@ namespace ChartTests.Charting.ZedGraph
             pg.AxisChange();
             Image tmpImage = new Bitmap(Parameters.ChartWidth, Parameters.ChartHeight);
             var g = Graphics.FromImage(tmpImage);
+            pg.ReSize(g, new RectangleF(0, 0, Parameters.ChartWidth, Parameters.ChartHeight));
             pg.Draw(g);
             return tmpImage;
         }
