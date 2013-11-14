@@ -33,6 +33,8 @@ namespace ChartTests.Charting.MsCharting
             testChart.ChartAreas.Add(tmpChartArea);
             testChart.Legends.Add(new Legend("testLegend"));
             testChart.Series.Add(tmpSeria);
+            testChart.Width = Parameters.ChartWidth;
+            testChart.Height = Parameters.ChartHeight;
             return testChart;
         }
 

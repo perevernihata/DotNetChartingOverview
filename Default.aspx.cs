@@ -20,11 +20,15 @@ namespace ChartTests
                 return;
             int maxValue;
             int dataPointCount;
+            int chartWidth;
+            int chartHeight;
             if (!Int32.TryParse(tbMaxValue.Text, out maxValue) || !Int32.TryParse(tbDataPointsCount.Text, out dataPointCount))
+                return;
+            if (!Int32.TryParse(tbWidth.Text, out chartWidth) || !Int32.TryParse(tbHeight.Text, out chartHeight))
                 return;
             for (var i = 0; i < int.Parse(tbChartsCount.Text); i++)
             {
-                chartPanel.Controls.Add(new CommonChartControl(factory, dataPointCount, maxValue));
+                chartPanel.Controls.Add(new CommonChartControl(factory, dataPointCount, maxValue, chartWidth, chartHeight));
             }
         }
     }

@@ -14,7 +14,7 @@ namespace ChartTests.Charting.GoogleSharpCharting
 
         protected override Image DoCreateChartImage()
         {
-            var chart = new LineChart(400, 300);
+            var chart = new LineChart(Parameters.ChartWidth, Parameters.ChartHeight);
             chart.SetData(Parameters.SeriaData.Select(t => t.Value).ToArray());
             var webClient = new WebClient();
             byte[] imageBytes = webClient.DownloadData(chart.GetUrl());            

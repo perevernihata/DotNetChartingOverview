@@ -31,6 +31,15 @@
         </tr>
         <tr>
             <td style="width: 500px;">
+                <asp:Literal ID="Literal1" runat="server">Please chart resolution</asp:Literal>
+            </td>
+            <td style="width: 500px;">
+                Width: <asp:TextBox ID="tbWidth" runat="server">400</asp:TextBox>
+                Height: <asp:TextBox ID="tbHeight" runat="server">300</asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 500px;">
                 <asp:Literal runat="server">Select chart source:</asp:Literal>
             </td>
             <td style="width: 500px;">

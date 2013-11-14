@@ -4,6 +4,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Web;
+using ChartTests.Charting;
 
 namespace ChartTests
 {
@@ -15,10 +16,10 @@ namespace ChartTests
         private IEnumerable<KeyValuePair<int, int>> GenerateRandomPoints(int count, int seed, int maxValue)
         {
             var random = new Random(seed);
-            for (int i = 1; i < count; i++)
+            for (var i = 1; i < count; i++)
             {
-                int randomx = random.Next(0, maxValue);
-                int randomy = random.Next(0, maxValue);
+                var randomx = random.Next(0, maxValue);
+                var randomy = random.Next(0, maxValue);
                 yield return new KeyValuePair<int, int>(randomx, randomy);
             }
         }
@@ -59,7 +60,9 @@ namespace ChartTests
         {
             return new ChartParameters
                 {
-                    SeriaData = GenerateRandomPoints(DataPointsCountParam, SaltParam, MaxValueParam)
+                    SeriaData = GenerateRandomPoints(DataPointsCountParam, SaltParam, MaxValueParam),
+                    ChartWidth = int.Parse(HttpContext.Current.Request[CommonChartControl.ChartWidthParamName]),
+                    ChartHeight = int.Parse(HttpContext.Current.Request[CommonChartControl.ChartHeightParamName])
                 };
         }
         private static readonly object Locker = new object();

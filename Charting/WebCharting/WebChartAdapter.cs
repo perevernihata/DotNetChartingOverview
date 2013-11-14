@@ -26,10 +26,10 @@ namespace ChartTests.Charting.WebCharting
         {
             var webChart = new LineChart(GenerateChartPointCollection());
             webChart.Engine = new ChartEngine();
-            webChart.Engine.Size = new Size(400, 300);
+            webChart.Engine.Size = new Size(Parameters.ChartWidth, Parameters.ChartHeight);
             webChart.Engine.Charts = new ChartCollection(webChart.Engine);
             webChart.Engine.Charts.Add(webChart);
-            return webChart.Engine.GetBitmap();;
+            return webChart.Engine.GetBitmap();
         }
     }
 }

@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+﻿using System.Collections.Generic;
 
-namespace ChartTests
+namespace ChartTests.Charting
 {
     public class ChartParameters
     {
         public IEnumerable<KeyValuePair<int, int>> SeriaData = new List<KeyValuePair<int, int>>();
+        public int ChartWidth { get; set; }
+        public int ChartHeight { get; set; }
     }
 }

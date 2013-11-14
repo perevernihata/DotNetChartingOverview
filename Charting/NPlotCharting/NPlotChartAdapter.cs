@@ -13,7 +13,7 @@ namespace ChartTests.Charting.NPlotCharting
 
         protected override Image DoCreateChartImage()
         {
-            var surface = new PlotSurface2D(400, 300);
+            var surface = new PlotSurface2D(Parameters.ChartWidth, Parameters.ChartHeight);
             var plot = new LinePlot
                 {
                     OrdinateData = Parameters.SeriaData.Select(t => t.Key).ToArray(),

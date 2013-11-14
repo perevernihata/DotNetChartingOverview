@@ -21,7 +21,7 @@ namespace ChartTests.Charting.ZedGraph
             }
             pg.AddCurve("Test", seria, Color.Red, SymbolType.Diamond);
             pg.AxisChange();
-            Image tmpImage = new Bitmap(400, 300);
+            Image tmpImage = new Bitmap(Parameters.ChartWidth, Parameters.ChartHeight);
             var g = Graphics.FromImage(tmpImage);
             pg.Draw(g);
             return tmpImage;
