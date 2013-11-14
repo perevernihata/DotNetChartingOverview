@@ -1,0 +1,30 @@
+﻿using System.Drawing;
+using System.Linq;
+using ZedGraph;
+
+namespace ChartTests.Charting.ZedGraph
+{
+    public class ZedGraphChartAdapter : BaseChartAdapter
+    {
+        public ZedGraphChartAdapter(ChartParameters parameters)
+            : base(parameters)
+        {
+        }
+
+        protected override Image DoCreateChartImage()
+        {
+            var pg = new GraphPane();
+            var seria = new PointPairList();
+            foreach (var pointPair in Parameters.SeriaData.Select(p => new PointPair(p.Key, p.Value)))
+            {
+                seria.Add(pointPair);
+            }
+            pg.AddCurve("Test", seria, Color.Red, SymbolType.Diamond);
+            pg.AxisChange();
+            Image tmpImage = new Bitmap(400, 300);
+            var g = Graphics.FromImage(tmpImage);
+            pg.Draw(g);
+            return tmpImage;
+        }
+    }
+}

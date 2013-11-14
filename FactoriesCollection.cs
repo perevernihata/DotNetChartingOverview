@@ -4,6 +4,7 @@ using ChartTests.Charting.GoogleSharpCharting;
 using ChartTests.Charting.MsCharting;
 using ChartTests.Charting.NPlotCharting;
 using ChartTests.Charting.WebCharting;
+using ChartTests.Charting.ZedGraph;
 
 namespace ChartTests
 {
@@ -20,6 +21,7 @@ namespace ChartTests
             Add(new WebChartControlFactory());
             Add(new NPlotChartFactory());
             Add(new GoogleSharpChartFactory());
+            Add(new ZedGraphChartFactory());
         }
     }
 }

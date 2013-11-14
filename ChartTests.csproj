@@ -59,6 +59,9 @@
     <Reference Include="WebChart">
       <HintPath>..\..\WebChart.dll</HintPath>
     </Reference>
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\..\Desktop\zedgraph_dll_v515\zedgraph_dll_v5.1.5\ZedGraph.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
@@ -79,6 +82,8 @@
     <Compile Include="Charting\GoogleSharpCharting\GoogleSharpChartFactory.cs" />
     <Compile Include="Charting\NPlotCharting\NPlotChartFactory.cs" />
     <Compile Include="Charting\NPlotCharting\NPlotChartAdapter.cs" />
+    <Compile Include="Charting\ZedGraph\ZedGraphChartAdapter.cs" />
+    <Compile Include="Charting\ZedGraph\ZedGraphChartFactory.cs" />
     <Compile Include="CommonChartControl.cs" />
     <Compile Include="Charting\MsCharting\MicrosoftChartAdapter.cs" />
     <Compile Include="Charting\WebCharting\WebChartAdapter.cs" />
@@ -120,9 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
