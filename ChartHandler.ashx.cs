@@ -64,17 +64,24 @@ namespace ChartTests
                     SeriaData = GenerateRandomPoints(DataPointsCountParam, SaltParam, MaxValueParam)
                 };
         }
-
+        private static readonly object Locker = new object();
         public void ProcessRequest(HttpContext context)
         {
-            IChartFactory currentFactory = FactoriesCollection.Instance.SingleOrDefault(f => f.Id == FactoryIdParam);            
-            context.Response.ContentType = "image/png";
-            using (var image = currentFactory.GenerateChart(CreateParameters()).CreateChartImage())
+            // As far i can see some of the charts are not thread safe, and sometimes we can get deadlock without a reason.
+            // Since I have no will to spent time on this issue, this patch this solves the problem
+            lock (Locker)
             {
-                var stream = new MemoryStream();
-                image.Save(stream, ImageFormat.Png);
-                byte[] imageBlob = stream.GetBuffer();
-                context.Response.OutputStream.Write(imageBlob, 0, imageBlob.Length);
+                var currentFactory = FactoriesCollection.Instance.SingleOrDefault(f => f.Id == FactoryIdParam);
+                if (currentFactory == null)
+                    return;
+                context.Response.ContentType = "image/png";
+                using (var image = currentFactory.GenerateChart(CreateParameters()).CreateChartImage())
+                {
+                    var stream = new MemoryStream();
+                    image.Save(stream, ImageFormat.Png);
+                    byte[] imageBlob = stream.GetBuffer();
+                    context.Response.OutputStream.Write(imageBlob, 0, imageBlob.Length);
+                }
             }
         }
 

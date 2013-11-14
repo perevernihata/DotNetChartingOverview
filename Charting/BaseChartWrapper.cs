@@ -13,7 +13,7 @@ namespace ChartTests.Charting
         protected abstract Image DoCreateChartImage();
         public Image CreateChartImage()
         {
-            return DoCreateChartImage();
+                return DoCreateChartImage();
         }
 
     }

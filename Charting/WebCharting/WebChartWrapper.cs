@@ -7,7 +7,8 @@ namespace ChartTests.Charting.WebCharting
 {
     public class WebChartWrapper : BaseChartWrapper
     {
-        public WebChartWrapper(ChartParameters parameters) : base(parameters)
+        public WebChartWrapper(ChartParameters parameters)
+            : base(parameters)
         {
         }
 
@@ -16,7 +17,7 @@ namespace ChartTests.Charting.WebCharting
             var dataArray = new List<ChartPoint>();
             foreach (var point in Parameters.SeriaData)
             {
-                dataArray.Add(new ChartPoint(point.Key.ToString(CultureInfo.InvariantCulture),point.Value));
+                dataArray.Add(new ChartPoint(point.Key.ToString(CultureInfo.InvariantCulture), point.Value));
             }
             return new ChartPointCollection(dataArray.ToArray());
         }
@@ -25,15 +26,10 @@ namespace ChartTests.Charting.WebCharting
         {
             var webChart = new LineChart(GenerateChartPointCollection());
             webChart.Engine = new ChartEngine();
-            webChart.Legend = "test";
-            using (Image tmpResult = new Bitmap(300, 400))
-            {
-                using (var g = Graphics.FromImage(tmpResult))
-                {
-                    webChart.Render(g, 300, 400);
-                    return tmpResult;
-                }
-            }
+            webChart.Engine.Size = new Size(400, 300);
+            webChart.Engine.Charts = new ChartCollection(webChart.Engine);
+            webChart.Engine.Charts.Add(webChart);
+            return webChart.Engine.GetBitmap();;
         }
     }
 }
