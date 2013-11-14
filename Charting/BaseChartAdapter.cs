@@ -2,10 +2,10 @@
 
 namespace ChartTests.Charting
 {
-    public abstract class BaseChartWrapper: IChartWrapper
+    public abstract class BaseChartAdapter: IChartAdapter
     {
         protected ChartParameters Parameters { get; private set; }
-        protected BaseChartWrapper(ChartParameters parameters)
+        protected BaseChartAdapter(ChartParameters parameters)
         {
             Parameters = parameters;
         }

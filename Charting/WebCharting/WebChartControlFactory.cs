@@ -2,9 +2,9 @@
 {
     public class WebChartControlFactory: BaseChartFactory
     {
-        public override IChartWrapper DoGenerateChart(ChartParameters parameters)
+        public override IChartAdapter DoGenerateChart(ChartParameters parameters)
         {
-            return new WebChartWrapper(parameters);
+            return new WebChartAdapter(parameters);
         }
 
         public override string ChartTypeName

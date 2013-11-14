@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Web;
-using ChartTests.Charting;
 
 namespace ChartTests
 {
@@ -68,7 +66,7 @@ namespace ChartTests
         public void ProcessRequest(HttpContext context)
         {
             // As far i can see some of the charts are not thread safe, and sometimes we can get deadlock without a reason.
-            // Since I have no will to spent time on this issue, this patch this solves the problem
+            // Since I have no will to spent time on this issue, this patch solves the problem
             lock (Locker)
             {
                 var currentFactory = FactoriesCollection.Instance.SingleOrDefault(f => f.Id == FactoryIdParam);

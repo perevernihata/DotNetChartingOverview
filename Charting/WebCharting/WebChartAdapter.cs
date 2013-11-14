@@ -5,9 +5,9 @@ using WebChart;
 
 namespace ChartTests.Charting.WebCharting
 {
-    public class WebChartWrapper : BaseChartWrapper
+    public class WebChartAdapter : BaseChartAdapter
     {
-        public WebChartWrapper(ChartParameters parameters)
+        public WebChartAdapter(ChartParameters parameters)
             : base(parameters)
         {
         }

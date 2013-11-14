@@ -2,7 +2,7 @@
 
 namespace ChartTests.Charting
 {
-    public interface IChartWrapper
+    public interface IChartAdapter
     {
         Image CreateChartImage();
     }

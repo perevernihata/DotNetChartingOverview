@@ -1,14 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Drawing;
+﻿using System.Drawing;
 using System.IO;
-using System.Web.UI;
 using System.Web.UI.DataVisualization.Charting;
 
 namespace ChartTests.Charting.MsCharting
 {
-    public class MicrosoftChartWrapper : BaseChartWrapper
+    public class MicrosoftChartAdapter : BaseChartAdapter
     {
-        public MicrosoftChartWrapper(ChartParameters parameters) : base(parameters)
+        public MicrosoftChartAdapter(ChartParameters parameters) : base(parameters)
         {
         }
 

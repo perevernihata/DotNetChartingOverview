@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using ChartTests.Charting;
 using ChartTests.Charting.MsCharting;
+using ChartTests.Charting.NPlotCharting;
 using ChartTests.Charting.WebCharting;
 
 namespace ChartTests
@@ -16,6 +17,7 @@ namespace ChartTests
         {
             Add(new MicrosoftChartFactory());
             Add(new WebChartControlFactory());
+            Add(new NPlotChartFactory());
         }
     }
 }

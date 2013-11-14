@@ -2,9 +2,9 @@
 {
     public class MicrosoftChartFactory : BaseChartFactory 
     {        
-        public override IChartWrapper DoGenerateChart(ChartParameters parameters)
+        public override IChartAdapter DoGenerateChart(ChartParameters parameters)
         {
-            return new MicrosoftChartWrapper(parameters);
+            return new MicrosoftChartAdapter(parameters);
         }
 
         public override string ChartTypeName
