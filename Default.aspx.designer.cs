@@ -13,15 +13,6 @@ namespace ChartTests {
     public partial class _Default {
         
         /// <summary>
-        /// Literal3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal3;
-        
-        /// <summary>
         /// tbChartsCount control.
         /// </summary>
         /// <remarks>
@@ -29,15 +20,6 @@ namespace ChartTests {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbChartsCount;
-        
-        /// <summary>
-        /// Literal1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal1;
         
         /// <summary>
         /// tbDataPointsCount control.
@@ -49,15 +31,6 @@ namespace ChartTests {
         protected global::System.Web.UI.WebControls.TextBox tbDataPointsCount;
         
         /// <summary>
-        /// Literal2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal2;
-        
-        /// <summary>
         /// tbMaxValue control.
         /// </summary>
         /// <remarks>
@@ -65,15 +38,6 @@ namespace ChartTests {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbMaxValue;
-        
-        /// <summary>
-        /// Literal4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal4;
         
         /// <summary>
         /// dblFactories control.
@@ -85,22 +49,22 @@ namespace ChartTests {
         protected global::System.Web.UI.WebControls.DropDownList dblFactories;
         
         /// <summary>
-        /// btCLick control.
+        /// btClick control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btCLick;
+        protected global::System.Web.UI.WebControls.Button btClick;
         
         /// <summary>
-        /// ltrTimeSpan control.
+        /// lblTimeSpan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ltrTimeSpan;
+        protected global::System.Web.UI.WebControls.Label lblTimeSpan;
         
         /// <summary>
         /// hdTime control.

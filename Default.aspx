@@ -7,7 +7,7 @@
     <table>
         <tr>
             <td style="width: 500px;">
-                <asp:Literal ID="Literal3" runat="server">Please enter charts count:</asp:Literal>
+                <asp:Literal runat="server">Please enter charts count:</asp:Literal>
             </td>
             <td style="width: 500px;">
                 <asp:TextBox ID="tbChartsCount" runat="server">20</asp:TextBox>
@@ -15,7 +15,7 @@
         </tr>
         <tr>
             <td style="width: 500px;">
-                <asp:Literal ID="Literal1" runat="server">Please enter data points count:</asp:Literal>
+                <asp:Literal runat="server">Please enter data points count:</asp:Literal>
             </td>
             <td style="width: 500px;">
                 <asp:TextBox ID="tbDataPointsCount" runat="server">1000</asp:TextBox>
@@ -23,7 +23,7 @@
         </tr>
         <tr>
             <td style="width: 500px;">
-                <asp:Literal ID="Literal2" runat="server">Please enter max data point value:</asp:Literal>
+                <asp:Literal runat="server">Please enter max data point value:</asp:Literal>
             </td>
             <td style="width: 500px;">
                 <asp:TextBox ID="tbMaxValue" runat="server">1000</asp:TextBox>
@@ -31,37 +31,39 @@
         </tr>
         <tr>
             <td style="width: 500px;">
-                <asp:Literal ID="Literal4" runat="server">Select chart source:</asp:Literal>
+                <asp:Literal runat="server">Select chart source:</asp:Literal>
             </td>
             <td style="width: 500px;">
                 <asp:DropDownList ID="dblFactories" runat="server" />
             </td>
         </tr>
     </table>
-    <asp:Button runat="server" OnClick="BtnClick" ID="btCLick" Text="Check" />
+    <asp:Button runat="server" OnClick="BtnClick" ID="btClick" Text="Check" />
     <br />
-    <asp:Label ID="ltrTimeSpan" runat="server"></asp:Label>
+    <asp:Label ID="lblTimeSpan" runat="server"></asp:Label>
     <input type="hidden" id="hdTime" value="" runat="server" />
     <asp:Panel ID="chartPanel" runat="server">
     </asp:Panel>
     <script type="text/javascript">
-        var button = document.getElementById('MainContent_btCLick');
+        var button = document.getElementById('<%=btClick.ClientID %>');
+        var hdTime = document.getElementById('<%=hdTime.ClientID %>');
         button.addEventListener('click', function () {
             var now = new Date();
             var ticks = now.getTime();
-            var hiddenelement = document.getElementById('MainContent_hdTime');
-            hiddenelement.setAttribute('value', ticks);
+            hdTime.setAttribute('value', ticks);
         } , false);
 
         function OnImagesLoaded() {
             var now = new Date();
             var ticks = now.getTime();
-            var startTime = document.getElementById('MainContent_hdTime').getAttribute('value');
+            var startTime = hdTime.getAttribute('value');
             if (startTime) {
                 var generatingTime = (ticks - startTime);
                 var s = generatingTime / 1000;
-                var span = document.getElementById('MainContent_ltrTimeSpan');
-                span.innerHTML = span.innerHTML + s + ' seconds';
+                var span = document.getElementById('<%=lblTimeSpan.ClientID %>');
+                span.innerHTML = "Generating " + 
+                    document.getElementById('<%=tbChartsCount.ClientID %>').getAttribute('value') + " charts each with " + 
+                    document.getElementById('<%=tbDataPointsCount.ClientID %>').getAttribute('value') + " points takes " + s + ' seconds';
             }
         }
         
