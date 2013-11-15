@@ -1,5 +1,9 @@
 ﻿namespace FreeChartTools.Charting.WebCharting
 {
+    /// <summary>
+    /// BSD License 
+    /// Official link - http://www.carlosag.net/tools/webchart/
+    /// </summary>
     public class WebChartControlFactory: BaseChartFactory
     {
         public override IChartAdapter DoGenerateChart(ChartParameters parameters)

@@ -8,6 +8,10 @@ using LinearAxis = OxyPlot.Axes.LinearAxis;
 
 namespace FreeChartTools.Charting.OxyPlotCharting
 {
+    /// <summary>
+    /// The MIT License (MIT)
+    /// Official link - http://oxyplot.codeplex.com/
+    /// </summary>
     public class OxyPlotAdapter : BaseChartAdapter
     {
         public OxyPlotAdapter(ChartParameters parameters)
@@ -24,17 +28,15 @@ namespace FreeChartTools.Charting.OxyPlotCharting
                     Points = Parameters.SeriaData.Select(t => new DataPoint(t.Key, t.Value) as IDataPoint).ToList()
                 };
             plotModel.Series.Add(ls);
-            plotModel.Axes.Add(new LinearAxis(AxisPosition.Left, -4, 4));
+            plotModel.Axes.Add(new LinearAxis(AxisPosition.Left));
             plotModel.Axes.Add(new LinearAxis(AxisPosition.Bottom));
             var bitmap = new Bitmap(Parameters.ChartWidth, Parameters.ChartHeight);
             using (var graphics = Graphics.FromImage(bitmap))
             {
-                var graphicsRenderContext1 = new GraphicsRenderContext();
-                graphicsRenderContext1.RendersToScreen = false;
-                var graphicsRenderContext2 = graphicsRenderContext1;
-                graphicsRenderContext2.SetGraphicsTarget(graphics);
+                var graphicsRenderContext = new GraphicsRenderContext { RendersToScreen = false };
+                graphicsRenderContext.SetGraphicsTarget(graphics);
                 plotModel.Update();
-                plotModel.Render(graphicsRenderContext2, Parameters.ChartWidth, Parameters.ChartHeight);
+                plotModel.Render(graphicsRenderContext, Parameters.ChartWidth, Parameters.ChartHeight);
                 return bitmap;
             }
         }

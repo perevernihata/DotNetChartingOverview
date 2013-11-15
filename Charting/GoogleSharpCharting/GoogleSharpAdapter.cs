@@ -6,9 +6,14 @@ using GoogleChartSharp;
 
 namespace FreeChartTools.Charting.GoogleSharpCharting
 {
-    public class GoogleSharpAdapter: BaseChartAdapter
+    /// <summary>
+    /// Apache License 2.0
+    /// Official link - https://code.google.com/p/googlechartsharp/
+    /// </summary>
+    public class GoogleSharpAdapter : BaseChartAdapter
     {
-        public GoogleSharpAdapter(ChartParameters parameters) : base(parameters)
+        public GoogleSharpAdapter(ChartParameters parameters)
+            : base(parameters)
         {
         }
 
@@ -17,7 +22,7 @@ namespace FreeChartTools.Charting.GoogleSharpCharting
             var chart = new LineChart(Parameters.ChartWidth, Parameters.ChartHeight);
             chart.SetData(Parameters.SeriaData.Select(t => t.Value).ToArray());
             var webClient = new WebClient();
-            byte[] imageBytes = webClient.DownloadData(chart.GetUrl());            
+            byte[] imageBytes = webClient.DownloadData(chart.GetUrl());
             return new Bitmap(new MemoryStream(imageBytes));
         }
     }

@@ -5,6 +5,10 @@ using PlotSurface2D = NPlot.Bitmap.PlotSurface2D;
 
 namespace FreeChartTools.Charting.NPlotCharting
 {
+    /// <summary>
+    /// BSD License 
+    /// Official link - http://sourceforge.net/projects/nplot/
+    /// </summary>
     public class NPlotChartAdapter: BaseChartAdapter
     {
         public NPlotChartAdapter(ChartParameters parameters) : base(parameters)

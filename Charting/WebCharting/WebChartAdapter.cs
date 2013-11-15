@@ -1,11 +1,14 @@
-﻿using System.Collections.Generic;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using WebChart;
 
 namespace FreeChartTools.Charting.WebCharting
 {
+    /// <summary>
+    /// BSD License 
+    /// Official link - http://www.carlosag.net/tools/webchart/
+    /// </summary>
     public class WebChartAdapter : BaseChartAdapter
     {
         public WebChartAdapter(ChartParameters parameters)

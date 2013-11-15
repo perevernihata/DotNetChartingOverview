@@ -1,5 +1,9 @@
 ﻿namespace FreeChartTools.Charting.NPlotCharting
 {
+    /// <summary>
+    /// BSD License 
+    /// Official link - http://sourceforge.net/projects/nplot/
+    /// </summary>
     public class NPlotChartFactory: BaseChartFactory
     {
         public override IChartAdapter DoGenerateChart(ChartParameters parameters)

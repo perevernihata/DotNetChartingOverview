@@ -36,7 +36,6 @@
     <Reference Include="GoogleChartSharp">
       <HintPath>..\..\..\Desktop\GoogleChartSharp\GoogleChartSharp\bin\Debug\GoogleChartSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="NPlot">
       <HintPath>..\..\..\Desktop\nplot-0.9.10.0\bin\net\2.0\release\NPlot.dll</HintPath>
     </Reference>
@@ -47,20 +46,11 @@
       <HintPath>..\..\..\Desktop\NET40\OxyPlot.WindowsForms.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DataVisualization" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Services" />
-    <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="WebChart">
       <HintPath>..\..\WebChart.dll</HintPath>
