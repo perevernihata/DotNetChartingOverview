@@ -3,7 +3,7 @@ using System.Linq;
 using NPlot;
 using PlotSurface2D = NPlot.Bitmap.PlotSurface2D;
 
-namespace ChartTests.Charting.NPlotCharting
+namespace FreeChartTools.Charting.NPlotCharting
 {
     public class NPlotChartAdapter: BaseChartAdapter
     {

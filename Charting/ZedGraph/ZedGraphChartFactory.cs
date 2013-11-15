@@ -1,5 +1,5 @@
 ﻿
-namespace ChartTests.Charting.ZedGraph
+namespace FreeChartTools.Charting.ZedGraph
 {
     public class ZedGraphChartFactory: BaseChartFactory
     {

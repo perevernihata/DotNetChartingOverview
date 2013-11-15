@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChartTests {
+namespace FreeChartTools {
     
     
     public partial class _Default {

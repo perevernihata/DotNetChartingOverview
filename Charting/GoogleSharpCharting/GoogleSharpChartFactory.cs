@@ -1,4 +1,4 @@
-﻿namespace ChartTests.Charting.GoogleSharpCharting
+﻿namespace FreeChartTools.Charting.GoogleSharpCharting
 {
     public class GoogleSharpChartFactory: BaseChartFactory
     {

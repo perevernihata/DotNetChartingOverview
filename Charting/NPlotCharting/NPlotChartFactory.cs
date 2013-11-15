@@ -1,4 +1,4 @@
-﻿namespace ChartTests.Charting.NPlotCharting
+﻿namespace FreeChartTools.Charting.NPlotCharting
 {
     public class NPlotChartFactory: BaseChartFactory
     {

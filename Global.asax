@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="ChartTests.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="FreeChartTools.Global" Language="C#" %>

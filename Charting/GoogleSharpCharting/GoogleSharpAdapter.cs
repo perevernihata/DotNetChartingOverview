@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using GoogleChartSharp;
 
-namespace ChartTests.Charting.GoogleSharpCharting
+namespace FreeChartTools.Charting.GoogleSharpCharting
 {
     public class GoogleSharpAdapter: BaseChartAdapter
     {

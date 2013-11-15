@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Web.UI.WebControls;
 
-namespace ChartTests
+namespace FreeChartTools
 {
     public partial class _Default : System.Web.UI.Page
     {

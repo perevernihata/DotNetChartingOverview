@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
+using System.Linq;
 using WebChart;
 
-namespace ChartTests.Charting.WebCharting
+namespace FreeChartTools.Charting.WebCharting
 {
     public class WebChartAdapter : BaseChartAdapter
     {
@@ -14,21 +15,14 @@ namespace ChartTests.Charting.WebCharting
 
         private ChartPointCollection GenerateChartPointCollection()
         {
-            var dataArray = new List<ChartPoint>();
-            foreach (var point in Parameters.SeriaData)
-            {
-                dataArray.Add(new ChartPoint(point.Key.ToString(CultureInfo.InvariantCulture), point.Value));
-            }
-            return new ChartPointCollection(dataArray.ToArray());
+            return new ChartPointCollection(Parameters.SeriaData.Select(point => new ChartPoint(point.Key.ToString(CultureInfo.InvariantCulture), point.Value)).ToArray());
         }
 
         protected override Image DoCreateChartImage()
         {
             var webChart = new LineChart(GenerateChartPointCollection());
-            webChart.Engine = new ChartEngine();
-            webChart.Engine.Size = new Size(Parameters.ChartWidth, Parameters.ChartHeight);
-            webChart.Engine.Charts = new ChartCollection(webChart.Engine);
-            webChart.Engine.Charts.Add(webChart);
+            webChart.Engine = new ChartEngine {Size = new Size(Parameters.ChartWidth, Parameters.ChartHeight)};
+            webChart.Engine.Charts = new ChartCollection(webChart.Engine) {webChart};
             return webChart.Engine.GetBitmap();
         }
     }

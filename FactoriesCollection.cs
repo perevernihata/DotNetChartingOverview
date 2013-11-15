@@ -1,12 +1,13 @@
 ﻿using System.Collections.ObjectModel;
-using ChartTests.Charting;
-using ChartTests.Charting.GoogleSharpCharting;
-using ChartTests.Charting.MsCharting;
-using ChartTests.Charting.NPlotCharting;
-using ChartTests.Charting.WebCharting;
-using ChartTests.Charting.ZedGraph;
+using FreeChartTools.Charting;
+using FreeChartTools.Charting.GoogleSharpCharting;
+using FreeChartTools.Charting.MsCharting;
+using FreeChartTools.Charting.NPlotCharting;
+using FreeChartTools.Charting.OxyPlotCharting;
+using FreeChartTools.Charting.WebCharting;
+using FreeChartTools.Charting.ZedGraph;
 
-namespace ChartTests
+namespace FreeChartTools
 {
     public class FactoriesCollection : Collection<IChartFactory>
     {
@@ -22,6 +23,7 @@ namespace ChartTests
             Add(new NPlotChartFactory());
             Add(new GoogleSharpChartFactory());
             Add(new ZedGraphChartFactory());
+            Add(new OxyPlotChartFactory());
         }
     }
 }

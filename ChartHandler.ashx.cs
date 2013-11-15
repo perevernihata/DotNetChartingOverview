@@ -4,9 +4,9 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Web;
-using ChartTests.Charting;
+using FreeChartTools.Charting;
 
-namespace ChartTests
+namespace FreeChartTools
 {
     /// <summary>
     /// Summary description for ChartHandler

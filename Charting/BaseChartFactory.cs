@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ChartTests.Charting
+namespace FreeChartTools.Charting
 {
     public abstract class BaseChartFactory : IChartFactory
     {

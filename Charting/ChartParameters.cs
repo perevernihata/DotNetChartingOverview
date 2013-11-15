@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ChartTests.Charting
+namespace FreeChartTools.Charting
 {
     public class ChartParameters
     {

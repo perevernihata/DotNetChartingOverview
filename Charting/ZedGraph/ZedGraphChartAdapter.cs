@@ -2,7 +2,7 @@
 using System.Linq;
 using ZedGraph;
 
-namespace ChartTests.Charting.ZedGraph
+namespace FreeChartTools.Charting.ZedGraph
 {
     public class ZedGraphChartAdapter : BaseChartAdapter
     {
@@ -19,7 +19,7 @@ namespace ChartTests.Charting.ZedGraph
             {
                 seria.Add(pointPair);
             }
-            pg.AddCurve("Test", seria, Color.Red, SymbolType.Diamond);
+            pg.AddCurve("Test", seria, Color.DeepSkyBlue);
             pg.AxisChange();
             Image tmpImage = new Bitmap(Parameters.ChartWidth, Parameters.ChartHeight);
             var g = Graphics.FromImage(tmpImage);

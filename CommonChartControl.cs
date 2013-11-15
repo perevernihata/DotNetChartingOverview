@@ -1,8 +1,8 @@
 ﻿using System.Globalization;
 using System.Web.UI;
-using ChartTests.Charting;
+using FreeChartTools.Charting;
 
-namespace ChartTests
+namespace FreeChartTools
 {
     public class CommonChartControl: Control
     {

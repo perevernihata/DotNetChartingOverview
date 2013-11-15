@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ChartTests</RootNamespace>
-    <AssemblyName>ChartTests</AssemblyName>
+    <RootNamespace>FreeChartTools</RootNamespace>
+    <AssemblyName>FreeChartTools</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
@@ -39,6 +39,12 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="NPlot">
       <HintPath>..\..\..\Desktop\nplot-0.9.10.0\bin\net\2.0\release\NPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot">
+      <HintPath>..\..\..\Desktop\NET40\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.WindowsForms">
+      <HintPath>..\..\..\Desktop\NET40\OxyPlot.WindowsForms.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -82,6 +88,8 @@
     <Compile Include="Charting\GoogleSharpCharting\GoogleSharpChartFactory.cs" />
     <Compile Include="Charting\NPlotCharting\NPlotChartFactory.cs" />
     <Compile Include="Charting\NPlotCharting\NPlotChartAdapter.cs" />
+    <Compile Include="Charting\OxyPlotCharting\OxyPlotAdapter.cs" />
+    <Compile Include="Charting\OxyPlotCharting\OxyPlotChartFactory.cs" />
     <Compile Include="Charting\ZedGraph\ZedGraphChartAdapter.cs" />
     <Compile Include="Charting\ZedGraph\ZedGraphChartFactory.cs" />
     <Compile Include="CommonChartControl.cs" />

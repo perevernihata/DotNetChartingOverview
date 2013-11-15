@@ -2,7 +2,7 @@
 using System.IO;
 using System.Web.UI.DataVisualization.Charting;
 
-namespace ChartTests.Charting.MsCharting
+namespace FreeChartTools.Charting.MsCharting
 {
     public class MicrosoftChartAdapter : BaseChartAdapter
     {
@@ -14,8 +14,7 @@ namespace ChartTests.Charting.MsCharting
         {
             var tmpSeries = new Series
                 {
-                ChartType = SeriesChartType.Line,
-                Color = Color.Red
+                ChartType = SeriesChartType.Line
             };
             foreach (var point in Parameters.SeriaData)
             {
@@ -29,9 +28,9 @@ namespace ChartTests.Charting.MsCharting
         {
             var testChart = new Chart { ImageStorageMode = ImageStorageMode.UseImageLocation };
             var tmpSeria = GenerateSeria();
-            var tmpChartArea = new ChartArea("test area");
+            var tmpChartArea = new ChartArea("");
             testChart.ChartAreas.Add(tmpChartArea);
-            testChart.Legends.Add(new Legend("testLegend"));
+            testChart.Legends.Add(new Legend(""));
             testChart.Series.Add(tmpSeria);
             testChart.Width = Parameters.ChartWidth;
             testChart.Height = Parameters.ChartHeight;

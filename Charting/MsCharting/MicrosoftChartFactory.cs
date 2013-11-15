@@ -1,4 +1,4 @@
-﻿namespace ChartTests.Charting.MsCharting
+﻿namespace FreeChartTools.Charting.MsCharting
 {
     public class MicrosoftChartFactory : BaseChartFactory 
     {        

@@ -1,4 +1,4 @@
-﻿namespace ChartTests.Charting.WebCharting
+﻿namespace FreeChartTools.Charting.WebCharting
 {
     public class WebChartControlFactory: BaseChartFactory
     {
