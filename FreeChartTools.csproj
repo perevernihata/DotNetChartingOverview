@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ChartFX.Lite">
+      <HintPath>..\..\..\..\..\Program Files (x86)\ChartFX Lite for .NET\bin\ChartFX.Lite.dll</HintPath>
+    </Reference>
     <Reference Include="GoogleChartSharp">
       <HintPath>..\..\..\Desktop\GoogleChartSharp\GoogleChartSharp\bin\Debug\GoogleChartSharp.dll</HintPath>
     </Reference>
@@ -47,11 +50,14 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
     <Reference Include="WebChart">
       <HintPath>..\..\WebChart.dll</HintPath>
     </Reference>
@@ -74,6 +80,8 @@
     <Compile Include="ChartHandler.ashx.cs">
       <DependentUpon>ChartHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Charting\ChartFX\ChartFxAdapter.cs" />
+    <Compile Include="Charting\ChartFX\ChartFxFactory.cs" />
     <Compile Include="Charting\GoogleSharpCharting\GoogleSharpAdapter.cs" />
     <Compile Include="Charting\GoogleSharpCharting\GoogleSharpChartFactory.cs" />
     <Compile Include="Charting\NPlotCharting\NPlotChartFactory.cs" />

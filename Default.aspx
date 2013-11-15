@@ -31,7 +31,7 @@
         </tr>
         <tr>
             <td style="width: 500px;">
-                <asp:Literal ID="Literal1" runat="server">Please chart resolution</asp:Literal>
+                <asp:Literal ID="Literal1" runat="server">Please enter chart resolution</asp:Literal>
             </td>
             <td style="width: 500px;">
                 Width: <asp:TextBox ID="tbWidth" runat="server">400</asp:TextBox>
