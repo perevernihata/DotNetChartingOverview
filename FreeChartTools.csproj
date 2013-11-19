@@ -36,6 +36,9 @@
     <Reference Include="ChartFX.Lite">
       <HintPath>..\..\..\..\..\Program Files (x86)\ChartFX Lite for .NET\bin\ChartFX.Lite.dll</HintPath>
     </Reference>
+    <Reference Include="disnet">
+      <HintPath>..\..\..\..\dislin\disnet.dll</HintPath>
+    </Reference>
     <Reference Include="GoogleChartSharp">
       <HintPath>..\..\..\Desktop\GoogleChartSharp\GoogleChartSharp\bin\Debug\GoogleChartSharp.dll</HintPath>
     </Reference>
@@ -82,6 +85,8 @@
     </Compile>
     <Compile Include="Charting\ChartFXCharting\ChartFxAdapter.cs" />
     <Compile Include="Charting\ChartFXCharting\ChartFxFactory.cs" />
+    <Compile Include="Charting\DisLinCharting\DislinChartAdapter.cs" />
+    <Compile Include="Charting\DisLinCharting\DislinChartFactory.cs" />
     <Compile Include="Charting\GoogleSharpCharting\GoogleSharpAdapter.cs" />
     <Compile Include="Charting\GoogleSharpCharting\GoogleSharpChartFactory.cs" />
     <Compile Include="Charting\NPlotCharting\NPlotChartFactory.cs" />

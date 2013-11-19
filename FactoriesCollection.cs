@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using FreeChartTools.Charting;
 using FreeChartTools.Charting.ChartFXCharting;
+using FreeChartTools.Charting.DisLinCharting;
 using FreeChartTools.Charting.GoogleSharpCharting;
 using FreeChartTools.Charting.MsCharting;
 using FreeChartTools.Charting.NPlotCharting;
@@ -26,6 +27,7 @@ namespace FreeChartTools
             Add(new ZedGraphChartFactory());
             Add(new OxyPlotChartFactory());
             Add(new ChartFxFactory());
+            Add(new DislinChartFactory());
         }
     }
 }
