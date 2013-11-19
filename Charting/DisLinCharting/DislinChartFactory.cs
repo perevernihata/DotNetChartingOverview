@@ -1,6 +1,9 @@
 ﻿
 namespace FreeChartTools.Charting.DisLinCharting
 {
+    /// <summary>
+    /// Free for non-commercial use
+    /// </summary>
     public class DislinChartFactory: BaseChartFactory
     {
         public override IChartAdapter DoGenerateChart(ChartParameters parameters)

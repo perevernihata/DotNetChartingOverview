@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Web;
 
 namespace FreeChartTools.Charting.DisLinCharting
 {
+    /// <summary>
+    /// Free for non-commercial use
+    /// </summary>
     public class DislinChartAdapter: BaseChartAdapter
     {
         public DislinChartAdapter(ChartParameters parameters) : base(parameters)
