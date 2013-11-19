@@ -1,13 +1,7 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using FreeChartTools.Charting;
-using FreeChartTools.Charting.ChartFXCharting;
-using FreeChartTools.Charting.DisLinCharting;
-using FreeChartTools.Charting.GoogleSharpCharting;
-using FreeChartTools.Charting.MsCharting;
-using FreeChartTools.Charting.NPlotCharting;
-using FreeChartTools.Charting.OxyPlotCharting;
-using FreeChartTools.Charting.WebCharting;
-using FreeChartTools.Charting.ZedGraph;
+using Spring.Context.Support;
 
 namespace FreeChartTools
 {
@@ -16,18 +10,15 @@ namespace FreeChartTools
         private static FactoriesCollection _instance;
         public static FactoriesCollection Instance
         {
-            get { return _instance ?? (_instance = new FactoriesCollection()); }
+            get
+            {
+                return _instance ?? (_instance = (FactoriesCollection) ContextRegistry.GetContext().GetObject("CurrentFactoriesCollection"));
+            }
         }
-        private FactoriesCollection()
+
+        public FactoriesCollection(IList<IChartFactory> list):base(list)
         {
-            Add(new MicrosoftChartFactory());
-            Add(new WebChartControlFactory());
-            Add(new NPlotChartFactory());
-            Add(new GoogleSharpChartFactory());
-            Add(new ZedGraphChartFactory());
-            Add(new OxyPlotChartFactory());
-            Add(new ChartFxFactory());
-            Add(new DislinChartFactory());
+            
         }
     }
 }

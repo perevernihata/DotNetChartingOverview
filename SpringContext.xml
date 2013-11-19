@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+    <object name="CurrentFactoriesCollection" type="FreeChartTools.FactoriesCollection, FreeChartTools, Version=1.0.0.0, Culture=neutral">
+        <constructor-arg>
+            <list element-type="FreeChartTools.Charting.IChartFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral">
+                <ref object="ChartFxFactory"/>
+                <ref object="DisLinChartingFactory"/>
+                <ref object="GoogleSharpChartingFactory"/>
+                <ref object="MsChartingFactory"/>
+                <ref object="NPlotChartFactory"/>
+                <ref object="OxyPlotChartFactory"/>
+                <ref object="WebChartControlFactory"/>
+                <ref object="ZedGraphChartFactory"/>
+            </list>
+        </constructor-arg>
+    </object>
+    <object name="ChartFxFactory" type="FreeChartTools.Charting.ChartFXCharting.ChartFxFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
+    <object name="DisLinChartingFactory" type="FreeChartTools.Charting.DisLinCharting.DislinChartFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
+    <object name="GoogleSharpChartingFactory" type="FreeChartTools.Charting.GoogleSharpCharting.GoogleSharpChartFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
+    <object name="MsChartingFactory" type="FreeChartTools.Charting.MsCharting.MicrosoftChartFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
+    <object name="NPlotChartFactory" type="FreeChartTools.Charting.NPlotCharting.NPlotChartFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
+    <object name="OxyPlotChartFactory" type="FreeChartTools.Charting.OxyPlotCharting.OxyPlotChartFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
+    <object name="WebChartControlFactory" type="FreeChartTools.Charting.WebCharting.WebChartControlFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
+    <object name="ZedGraphChartFactory" type="FreeChartTools.Charting.ZedGraph.ZedGraphChartFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
+    
+</objects>
