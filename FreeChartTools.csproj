@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ChartFX.Lite">
-      <HintPath>..\..\..\..\..\Program Files (x86)\ChartFX Lite for .NET\bin\ChartFX.Lite.dll</HintPath>
-    </Reference>
     <Reference Include="disnet">
       <HintPath>..\..\..\..\dislin\disnet.dll</HintPath>
     </Reference>
@@ -90,8 +87,6 @@
     <Compile Include="ChartHandler.ashx.cs">
       <DependentUpon>ChartHandler.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Charting\ChartFXCharting\ChartFxAdapter.cs" />
-    <Compile Include="Charting\ChartFXCharting\ChartFxFactory.cs" />
     <Compile Include="Charting\DisLinCharting\DislinChartAdapter.cs" />
     <Compile Include="Charting\DisLinCharting\DislinChartFactory.cs" />
     <Compile Include="Charting\GoogleSharpCharting\GoogleSharpAdapter.cs" />
