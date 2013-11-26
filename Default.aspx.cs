@@ -108,6 +108,7 @@ namespace FreeChartTools
             currentStatistic.Time = TimeSpan.FromTicks(DateTime.Now.Ticks - SolutionStartTime.Ticks).TotalSeconds;
             if (CurrentIteration >= int.Parse(tbIterationsCount.Text))
             {
+                Statistic = Statistic.OrderBy(info => info.Average).ToList();
                 SolutionStartTime = TimeSpan.FromTicks(DateTime.Now.Ticks);
                 CurrentIteration = 0;
                 if (dblFactories.SelectedIndex == dblFactories.Items.Count - 1)
@@ -136,7 +137,7 @@ namespace FreeChartTools
             public string FactoryName { get { return FactoriesCollection.Instance.Single(f => f.Id == FactoryId).ChartTypeName; } }
             public double Time { get; set; }
             public int Iterations { get; set; }
-            public double Avarage { get { return Iterations == 0 ? 0 : Time / Iterations; } }
+            public double Average { get { return Iterations == 0 ? 0 : Time / Iterations; } }
         }
     }
 }

@@ -24,12 +24,12 @@
         <table>
             <tr>
                 <td colspan="2" style="text-align: center; font-weight: bold;">
-                    Single chart parameters
+                    Chart solution parameters
                 </td>
             </tr>
             <tr>
                 <td>
-                    <asp:Literal runat="server">Please enter charts count:</asp:Literal>
+                    <asp:Literal runat="server">Please enter amount of charts:</asp:Literal>
                 </td>
                 <td align="center">
                     <asp:TextBox ID="tbChartsCount" runat="server">20</asp:TextBox>
@@ -37,7 +37,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Literal runat="server">Please enter data points count:</asp:Literal>
+                    <asp:Literal runat="server">Please enter count of points:</asp:Literal>
                 </td>
                 <td align="center">
                     <asp:TextBox ID="tbDataPointsCount" runat="server">1000</asp:TextBox>
@@ -45,7 +45,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Literal runat="server">Please enter max data point value:</asp:Literal>
+                    <asp:Literal runat="server">Please enter maximal axes value:</asp:Literal>
                 </td>
                 <td align="center">
                     <asp:TextBox ID="tbMaxValue" runat="server">5</asp:TextBox>
@@ -53,7 +53,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Literal runat="server">Please enter chart resolution</asp:Literal>
+                    <asp:Literal runat="server">Please enter image resolution:</asp:Literal>
                 </td>
                 <td align="center">
                     Width:
@@ -64,7 +64,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Literal runat="server">Select chart source:</asp:Literal>
+                    <asp:Literal runat="server">Select charting solution:</asp:Literal>
                 </td>
                 <td>
                     <asp:DropDownList ID="dblFactories" runat="server" />
@@ -79,7 +79,7 @@
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center; font-weight: bold;">
-                    Compare performance
+                    Performance comparison parameters
                 </td>
             </tr>
             <tr>
@@ -105,16 +105,19 @@
                                 <thead>
                                     <tr>
                                         <th>
+                                            №
+                                        </th>
+                                        <th>
                                             Chart type
                                         </th>
                                         <th>
                                             Number of iterations
                                         </th>
                                         <th>
-                                            Summary time
+                                            Summary time (s)
                                         </th>
                                         <th>
-                                            Avarage
+                                            Average (s)
                                         </th>
                                     </tr>
                                 </thead>
@@ -122,6 +125,9 @@
                         </HeaderTemplate>
                         <ItemTemplate>
                             <tr>
+                                <td>
+                                    <%# Container.ItemIndex + 1 %>
+                                </td>
                                 <td>
                                     <%# Eval("FactoryName")%>
                                 </td>
@@ -132,7 +138,7 @@
                                     <%# Eval("Time")%>
                                 </td>
                                 <td>
-                                    <%# Eval("Avarage")%>
+                                    <%# Eval("Average")%>
                                 </td>
                             </tr>
                         </ItemTemplate>
@@ -178,13 +184,14 @@
                 var generatingTime = (ticks - startTime);
                 var s = generatingTime / 1000;
                 var span = document.getElementById('<%=lblTimeSpan.ClientID %>');
-                span.innerHTML = "Generating " +
-                    document.getElementById('<%=tbChartsCount.ClientID %>').getAttribute('value') + " charts each with " +
-                    document.getElementById('<%=tbDataPointsCount.ClientID %>').getAttribute('value') + " points takes " + s + ' seconds';
                 lastTimeSpan.setAttribute('value', s);
                 if (hdIterate.getAttribute('value') == 'True') {
                     StoreTime();
                     document.getElementById('<%=btnIterateHidden.ClientID%>').click();
+                } else {
+                    span.innerHTML = "Generating " +
+                    document.getElementById('<%=tbChartsCount.ClientID %>').getAttribute('value') + " charts each with " +
+                    document.getElementById('<%=tbDataPointsCount.ClientID %>').getAttribute('value') + " points takes " + s + ' seconds';                    
                 }
             }
         }

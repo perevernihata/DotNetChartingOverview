@@ -1,4 +1,4 @@
-ASPCharts
+DotNetChartingOverview
 =========
 
-Shows examples of using different chart solutions for ASP. NET
+Overview free/open source solutions for .NET Framework. Can be used for performance comparison of those charts
