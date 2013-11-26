@@ -1,66 +1,174 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
-    CodeBehind="Default.aspx.cs" Inherits="FreeChartTools._Default" %>
+    CodeBehind="Default.aspx.cs" Inherits="FreeChartTools.Default" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+    <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            overflow-x: auto;
+            float: left;
+        }
+        table, th, td
+        {
+            border: 1px solid gray;
+        }
+        .hidden
+        {
+            visibility: collapse;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <table>
-        <tr>
-            <td style="width: 500px;">
-                <asp:Literal runat="server">Please enter charts count:</asp:Literal>
-            </td>
-            <td style="width: 500px;">
-                <asp:TextBox ID="tbChartsCount" runat="server">20</asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 500px;">
-                <asp:Literal runat="server">Please enter data points count:</asp:Literal>
-            </td>
-            <td style="width: 500px;">
-                <asp:TextBox ID="tbDataPointsCount" runat="server">1000</asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 500px;">
-                <asp:Literal runat="server">Please enter max data point value:</asp:Literal>
-            </td>
-            <td style="width: 500px;">
-                <asp:TextBox ID="tbMaxValue" runat="server">1000</asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 500px;">
-                <asp:Literal ID="Literal1" runat="server">Please enter chart resolution</asp:Literal>
-            </td>
-            <td style="width: 500px;">
-                Width: <asp:TextBox ID="tbWidth" runat="server">400</asp:TextBox>
-                Height: <asp:TextBox ID="tbHeight" runat="server">300</asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 500px;">
-                <asp:Literal runat="server">Select chart source:</asp:Literal>
-            </td>
-            <td style="width: 500px;">
-                <asp:DropDownList ID="dblFactories" runat="server" />
-            </td>
-        </tr>
-    </table>
-    <asp:Button runat="server" OnClick="BtnClick" ID="btClick" Text="Check" />
-    <br />
+    <div>
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: center; font-weight: bold;">
+                    Single chart parameters
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Literal runat="server">Please enter charts count:</asp:Literal>
+                </td>
+                <td align="center">
+                    <asp:TextBox ID="tbChartsCount" runat="server">20</asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Literal runat="server">Please enter data points count:</asp:Literal>
+                </td>
+                <td align="center">
+                    <asp:TextBox ID="tbDataPointsCount" runat="server">1000</asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Literal runat="server">Please enter max data point value:</asp:Literal>
+                </td>
+                <td align="center">
+                    <asp:TextBox ID="tbMaxValue" runat="server">5</asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Literal runat="server">Please enter chart resolution</asp:Literal>
+                </td>
+                <td align="center">
+                    Width:
+                    <asp:TextBox ID="tbWidth" Width="30" runat="server">400</asp:TextBox>
+                    Height:
+                    <asp:TextBox ID="tbHeight" Width="30" runat="server">300</asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Literal runat="server">Select chart source:</asp:Literal>
+                </td>
+                <td>
+                    <asp:DropDownList ID="dblFactories" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td align="center">
+                    <asp:Button runat="server" OnClick="BtnClick" ID="btnCheck" Text="Check" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center; font-weight: bold;">
+                    Compare performance
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Please select amount of iterations:
+                </td>
+                <td align="center">
+                    <asp:TextBox runat="server" ID="tbIterationsCount">5</asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td align="center">
+                    <asp:Button runat="server" ID="btnCompareAll" OnClick="BtnCompareAllClick" Text="Compare all solutions" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:Repeater ID="rpCheckAllResults" runat="server" Visible="False">
+                        <HeaderTemplate>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Chart type
+                                        </th>
+                                        <th>
+                                            Number of iterations
+                                        </th>
+                                        <th>
+                                            Summary time
+                                        </th>
+                                        <th>
+                                            Avarage
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <tr>
+                                <td>
+                                    <%# Eval("FactoryName")%>
+                                </td>
+                                <td>
+                                    <%# Eval("Iterations")%>
+                                </td>
+                                <td>
+                                    <%# Eval("Time")%>
+                                </td>
+                                <td>
+                                    <%# Eval("Avarage")%>
+                                </td>
+                            </tr>
+                        </ItemTemplate>
+                        <FooterTemplate>
+                            </tbody> </table>
+                        </FooterTemplate>
+                    </asp:Repeater>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="clear: both;">
+        &nbsp;</div>
     <asp:Label ID="lblTimeSpan" runat="server"></asp:Label>
+    <input type="hidden" id="hdLastTimeSpan" value="0" runat="server" />
+    <input type="hidden" id="hdIterate" value="false" runat="server" />
     <input type="hidden" id="hdTime" value="" runat="server" />
+    <asp:Button runat="server" ID="btnIterateHidden" OnClick="BtnIterateHiddenClick"
+        CssClass="hidden" />
     <asp:Panel ID="chartPanel" runat="server">
     </asp:Panel>
     <script type="text/javascript">
-        var button = document.getElementById('<%=btClick.ClientID %>');
         var hdTime = document.getElementById('<%=hdTime.ClientID %>');
-        button.addEventListener('click', function () {
+
+        function StoreTime() {
             var now = new Date();
             var ticks = now.getTime();
             hdTime.setAttribute('value', ticks);
-        } , false);
+        }
+
+        var btnCheck = document.getElementById('<%=btnCheck.ClientID %>');
+        var btnCompareAll = document.getElementById('<%=btnCompareAll.ClientID %>');
+        var lastTimeSpan = document.getElementById('<%=hdLastTimeSpan.ClientID %>');
+        var hdIterate = document.getElementById('<%=hdIterate.ClientID %>');
+        btnCheck.addEventListener('click', StoreTime, false);
+        btnCompareAll.addEventListener('click', StoreTime, false);
 
         function OnImagesLoaded() {
             var now = new Date();
@@ -70,12 +178,17 @@
                 var generatingTime = (ticks - startTime);
                 var s = generatingTime / 1000;
                 var span = document.getElementById('<%=lblTimeSpan.ClientID %>');
-                span.innerHTML = "Generating " + 
-                    document.getElementById('<%=tbChartsCount.ClientID %>').getAttribute('value') + " charts each with " + 
+                span.innerHTML = "Generating " +
+                    document.getElementById('<%=tbChartsCount.ClientID %>').getAttribute('value') + " charts each with " +
                     document.getElementById('<%=tbDataPointsCount.ClientID %>').getAttribute('value') + " points takes " + s + ' seconds';
+                lastTimeSpan.setAttribute('value', s);
+                if (hdIterate.getAttribute('value') == 'True') {
+                    StoreTime();
+                    document.getElementById('<%=btnIterateHidden.ClientID%>').click();
+                }
             }
         }
-        
+
         var loadedImages = 0;
         var failedImages = 0;
         var images = document.images;

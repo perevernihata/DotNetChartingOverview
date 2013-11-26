@@ -10,7 +10,7 @@
 namespace FreeChartTools {
     
     
-    public partial class _Default {
+    public partial class Default {
         
         /// <summary>
         /// tbChartsCount control.
@@ -40,15 +40,6 @@ namespace FreeChartTools {
         protected global::System.Web.UI.WebControls.TextBox tbMaxValue;
         
         /// <summary>
-        /// Literal1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal1;
-        
-        /// <summary>
         /// tbWidth control.
         /// </summary>
         /// <remarks>
@@ -76,13 +67,40 @@ namespace FreeChartTools {
         protected global::System.Web.UI.WebControls.DropDownList dblFactories;
         
         /// <summary>
-        /// btClick control.
+        /// btnCheck control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btClick;
+        protected global::System.Web.UI.WebControls.Button btnCheck;
+        
+        /// <summary>
+        /// tbIterationsCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbIterationsCount;
+        
+        /// <summary>
+        /// btnCompareAll control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCompareAll;
+        
+        /// <summary>
+        /// rpCheckAllResults control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rpCheckAllResults;
         
         /// <summary>
         /// lblTimeSpan control.
@@ -94,6 +112,24 @@ namespace FreeChartTools {
         protected global::System.Web.UI.WebControls.Label lblTimeSpan;
         
         /// <summary>
+        /// hdLastTimeSpan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden hdLastTimeSpan;
+        
+        /// <summary>
+        /// hdIterate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden hdIterate;
+        
+        /// <summary>
         /// hdTime control.
         /// </summary>
         /// <remarks>
@@ -101,6 +137,15 @@ namespace FreeChartTools {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden hdTime;
+        
+        /// <summary>
+        /// btnIterateHidden control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnIterateHidden;
         
         /// <summary>
         /// chartPanel control.
