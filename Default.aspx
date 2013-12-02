@@ -45,7 +45,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Literal runat="server">Please enter maximal axes value:</asp:Literal>
+                    <asp:Literal runat="server">Please enter maximum axis value:</asp:Literal>
                 </td>
                 <td align="center">
                     <asp:TextBox ID="tbMaxValue" runat="server">5</asp:TextBox>
