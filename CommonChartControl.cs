@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 using System.Web.UI;
-using FreeChartTools.Charting;
+using ChartingCore;
 
 namespace FreeChartTools
 {

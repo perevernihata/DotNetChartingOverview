@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FreeChartTools.Charting
+namespace ChartingCore
 {
     public class ChartParameters
     {

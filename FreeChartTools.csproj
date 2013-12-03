@@ -33,6 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ChartFXCharting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ChartFXCharting.dll</HintPath>
+    </Reference>
+    <Reference Include="ChartingCore">
+      <HintPath>ChartingCore\bin\Debug\ChartingCore.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpressCharting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpressCharting.dll</HintPath>
+    </Reference>
     <Reference Include="disnet">
       <HintPath>..\..\..\..\dislin\disnet.dll</HintPath>
     </Reference>
@@ -72,6 +83,7 @@
   <ItemGroup>
     <EmbeddedResource Include="SpringContext.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -87,23 +99,21 @@
     <Compile Include="ChartHandler.ashx.cs">
       <DependentUpon>ChartHandler.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Charting\DisLinCharting\DislinChartAdapter.cs" />
-    <Compile Include="Charting\DisLinCharting\DislinChartFactory.cs" />
-    <Compile Include="Charting\GoogleSharpCharting\GoogleSharpAdapter.cs" />
-    <Compile Include="Charting\GoogleSharpCharting\GoogleSharpChartFactory.cs" />
-    <Compile Include="Charting\NPlotCharting\NPlotChartFactory.cs" />
-    <Compile Include="Charting\NPlotCharting\NPlotChartAdapter.cs" />
-    <Compile Include="Charting\OpenMindedPlot\OpenMindedPlotAdapter.cs" />
-    <Compile Include="Charting\OpenMindedPlot\OpenMindedPlotFactory.cs" />
-    <Compile Include="Charting\OxyPlotCharting\OxyPlotAdapter.cs" />
-    <Compile Include="Charting\OxyPlotCharting\OxyPlotChartFactory.cs" />
-    <Compile Include="Charting\ZedGraph\ZedGraphChartAdapter.cs" />
-    <Compile Include="Charting\ZedGraph\ZedGraphChartFactory.cs" />
+    <Compile Include="FreeCharting\ZedGraph\ZedGraphChartFactory.cs" />
+    <Compile Include="FreeCharting\DisLinCharting\DislinChartAdapter.cs" />
+    <Compile Include="FreeCharting\DisLinCharting\DislinChartFactory.cs" />
+    <Compile Include="FreeCharting\GoogleSharpCharting\GoogleSharpAdapter.cs" />
+    <Compile Include="FreeCharting\GoogleSharpCharting\GoogleSharpChartFactory.cs" />
+    <Compile Include="FreeCharting\NPlotCharting\NPlotChartFactory.cs" />
+    <Compile Include="FreeCharting\NPlotCharting\NPlotChartAdapter.cs" />
+    <Compile Include="FreeCharting\OpenMindedPlot\OpenMindedPlotAdapter.cs" />
+    <Compile Include="FreeCharting\OpenMindedPlot\OpenMindedPlotFactory.cs" />
+    <Compile Include="FreeCharting\OxyPlotCharting\OxyPlotAdapter.cs" />
+    <Compile Include="FreeCharting\OxyPlotCharting\OxyPlotChartFactory.cs" />
+    <Compile Include="FreeCharting\ZedGraph\ZedGraphChartAdapter.cs" />
     <Compile Include="CommonChartControl.cs" />
-    <Compile Include="Charting\MsCharting\MicrosoftChartAdapter.cs" />
-    <Compile Include="Charting\WebCharting\WebChartAdapter.cs" />
-    <Compile Include="Charting\ChartParameters.cs" />
-    <Compile Include="Charting\IChartAdapter.cs" />
+    <Compile Include="FreeCharting\MsCharting\MicrosoftChartAdapter.cs" />
+    <Compile Include="FreeCharting\WebCharting\WebChartAdapter.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -115,7 +125,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="FactoriesCollection.cs" />
-    <Compile Include="Charting\IChartFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -124,14 +133,10 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="Charting\BaseChartFactory.cs">
+    <Compile Include="FreeCharting\MsCharting\MicrosoftChartFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Charting\BaseChartAdapter.cs" />
-    <Compile Include="Charting\MsCharting\MicrosoftChartFactory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Charting\WebCharting\WebChartControlFactory.cs">
+    <Compile Include="FreeCharting\WebCharting\WebChartControlFactory.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

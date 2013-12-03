@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace FreeChartTools.Charting
+namespace ChartingCore
 {
     public abstract class BaseChartAdapter: IChartAdapter
     {

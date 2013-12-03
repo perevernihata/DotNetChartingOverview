@@ -4,7 +4,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Web;
-using FreeChartTools.Charting;
+using ChartingCore;
 
 namespace FreeChartTools
 {

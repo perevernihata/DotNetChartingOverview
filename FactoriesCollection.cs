@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using FreeChartTools.Charting;
+using ChartingCore;
 using Spring.Context.Support;
 
 namespace FreeChartTools
