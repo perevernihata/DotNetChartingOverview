@@ -12,12 +12,12 @@ namespace DevExpressCharting
     {
         public override IChartAdapter DoGenerateChart(ChartParameters parameters)
         {
-            throw new NotImplementedException();
+            return new DevExpressChartAdapter(parameters);
         }
 
         public override string ChartTypeName
         {
-            get { throw new NotImplementedException(); }
+            get { return "DevExpress"; }
         }
     }
 }
