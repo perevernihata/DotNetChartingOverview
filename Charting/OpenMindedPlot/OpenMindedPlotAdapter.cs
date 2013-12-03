@@ -29,12 +29,10 @@ namespace FreeChartTools.Charting.OpenMindedPlot
             plotter.Graph.PointStyle.Radius = 3;
             plotter.Graph.PointTextStyle.Enabled = false;
             plotter.Title.TextStyle.Foreground = Color.DimGray;
-            plotter.VerticalAxis.TextFormatter = v => ((int)v / 1000000).ToString(CultureInfo.InvariantCulture);
             plotter.OutputPath = HttpContext.Current.Server.MapPath("~/tmpImage.png");
             if (File.Exists(plotter.OutputPath))
                 File.Delete(plotter.OutputPath);
             plotter.Print(Parameters.SeriaData.Select(d => (float)d.Key).ToArray(), Parameters.SeriaData.Select(d => (float)d.Value).ToArray());
-
             using (var fs = new FileStream(plotter.OutputPath, FileMode.Open, FileAccess.Read))
             {
                 return Image.FromStream(fs);
