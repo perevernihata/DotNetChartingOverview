@@ -77,6 +77,10 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Charting, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d14f3dcc8e3e8763, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Charting.dll</HintPath>
+    </Reference>
     <Reference Include="WebChart">
       <HintPath>..\..\WebChart.dll</HintPath>
     </Reference>

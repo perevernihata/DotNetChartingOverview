@@ -13,6 +13,7 @@
                 <ref object="OpenMindedPlotFactory"/>
                 <!--<ref object="ChartFxFactory"/>-->
                 <!--<ref object="DevExpressFactory"/>-->
+                <!--<ref object="TelerikFactory"/>-->
             </list>
         </constructor-arg>
     </object>
@@ -26,5 +27,6 @@
     <object name="OpenMindedPlotFactory" type="FreeChartTools.FreeCharting.OpenMindedPlot.OpenMindedPlotFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
     <!--<object name="ChartFxFactory" type="ChartFXCharting.ChartFxFactory, ChartFXCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
     <!--<object name="DevExpressFactory" type="DevExpressCharting.DevExpressChartFactory, DevExpressCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
+    <!--<object name="TelerikFactory" type="TelerikCharting.TelerikChartFactory, TelerikCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
     
 </objects>
