@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -20,7 +22,7 @@ namespace FreeChartTools.Charting.GoogleSharpCharting
         protected override Image DoCreateChartImage()
         {
             var chart = new LineChart(Parameters.ChartWidth, Parameters.ChartHeight);
-            chart.SetData(Parameters.SeriaData.Select(t => t.Value).ToArray());
+            chart.SetData(Parameters.SeriaData.Select(t => new float[]{t.Key, t.Value}).ToList());
             var webClient = new WebClient();
             byte[] imageBytes = webClient.DownloadData(chart.GetUrl());
             return new Bitmap(new MemoryStream(imageBytes));

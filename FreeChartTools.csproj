@@ -48,20 +48,20 @@
     <Reference Include="OxyPlot.WindowsForms">
       <HintPath>..\..\..\Desktop\NET40\OxyPlot.WindowsForms.dll</HintPath>
     </Reference>
+    <Reference Include="Plot">
+      <HintPath>..\..\Desktop\openminded-plot-99661e108578\src\Plot\bin\Debug\Plot.dll</HintPath>
+    </Reference>
     <Reference Include="Spring.Core, Version=1.3.1.40711, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Spring.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
     <Reference Include="WebChart">
       <HintPath>..\..\WebChart.dll</HintPath>
     </Reference>
@@ -93,6 +93,8 @@
     <Compile Include="Charting\GoogleSharpCharting\GoogleSharpChartFactory.cs" />
     <Compile Include="Charting\NPlotCharting\NPlotChartFactory.cs" />
     <Compile Include="Charting\NPlotCharting\NPlotChartAdapter.cs" />
+    <Compile Include="Charting\OpenMindedPlot\OpenMindedPlotAdapter.cs" />
+    <Compile Include="Charting\OpenMindedPlot\OpenMindedPlotFactory.cs" />
     <Compile Include="Charting\OxyPlotCharting\OxyPlotAdapter.cs" />
     <Compile Include="Charting\OxyPlotCharting\OxyPlotChartFactory.cs" />
     <Compile Include="Charting\ZedGraph\ZedGraphChartAdapter.cs" />

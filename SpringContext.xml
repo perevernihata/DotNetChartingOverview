@@ -10,6 +10,7 @@
                 <ref object="OxyPlotChartFactory"/>
                 <ref object="WebChartControlFactory"/>
                 <ref object="ZedGraphChartFactory"/>
+                <ref object="OpenMindedPlotFactory"/>
             </list>
         </constructor-arg>
     </object>
@@ -20,5 +21,6 @@
     <object name="OxyPlotChartFactory" type="FreeChartTools.Charting.OxyPlotCharting.OxyPlotChartFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
     <object name="WebChartControlFactory" type="FreeChartTools.Charting.WebCharting.WebChartControlFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
     <object name="ZedGraphChartFactory" type="FreeChartTools.Charting.ZedGraph.ZedGraphChartFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
+    <object name="OpenMindedPlotFactory" type="FreeChartTools.Charting.OpenMindedPlot.OpenMindedPlotFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
     
 </objects>
