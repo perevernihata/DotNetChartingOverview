@@ -33,20 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ChartFXCharting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\ChartFXCharting.dll</HintPath>
-    </Reference>
     <Reference Include="ChartingCore">
       <HintPath>ChartingCore\bin\Debug\ChartingCore.dll</HintPath>
     </Reference>
     <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Common.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpressCharting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\DevExpressCharting.dll</HintPath>
     </Reference>
     <Reference Include="disnet">
       <HintPath>..\..\..\..\dislin\disnet.dll</HintPath>
@@ -77,10 +69,6 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="Telerik.Charting, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d14f3dcc8e3e8763, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Telerik.Charting.dll</HintPath>
-    </Reference>
     <Reference Include="WebChart">
       <HintPath>..\..\WebChart.dll</HintPath>
     </Reference>

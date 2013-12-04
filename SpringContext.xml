@@ -15,6 +15,7 @@
                 <!--<ref object="DevExpressFactory"/>-->
                 <!--<ref object="TelerikFactory"/>-->
                 <!--<ref object="TeeChartFactory"/>-->
+                <!--<ref object="ChartDirectorFactory"/>-->
             </list>
         </constructor-arg>
     </object>
@@ -30,5 +31,6 @@
     <!--<object name="DevExpressFactory" type="DevExpressCharting.DevExpressChartFactory, DevExpressCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
     <!--<object name="TelerikFactory" type="TelerikCharting.TelerikChartFactory, TelerikCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
     <!--<object name="TeeChartFactory" type="TeeChartCharting.TeeChartFactory, TeeChartCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
+    <!--<object name="ChartDirectorFactory" type="NetWebChartsCharting.NetWebChartFactory, NetWebChartsCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
     
 </objects>
