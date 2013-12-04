@@ -1,14 +1,9 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
-using System.Web;
 using ChartingCore;
 using DevExpress.XtraCharts;
-using DevExpress.XtraCharts.Native;
-using DevExpress.XtraCharts.Web;
-using ScaleType = DevExpress.XtraCharts.ScaleType;
-using Series = DevExpress.XtraCharts.Series;
-using SeriesPoint = DevExpress.XtraCharts.SeriesPoint;
+using System.Linq;
 
 namespace DevExpressCharting
 {
@@ -24,27 +19,16 @@ namespace DevExpressCharting
 
         protected override Image DoCreateChartImage()
         {
-            WebChartControl WebChartControl1 = new WebChartControl();
-
-            // Add the chart to the form. 
-            // Note that a chart isn't initialized until it's added to the form's collection of controls. 
-
-            // Create a line series and add points to it. 
-            Series series1 = new Series("My Series", ViewType.Line);
-            series1.Points.Add(new SeriesPoint("A", new double[] { 2 }));
-            series1.Points.Add(new SeriesPoint("B", new double[] { 7 }));
-            series1.Points.Add(new SeriesPoint("C", new double[] { 5 }));
-            series1.Points.Add(new SeriesPoint("D", new double[] { 9 }));
-            WebChartControl1.Series.Add(series1);
-            var tmpFileName = HttpContext.Current.Server.MapPath("~/tmpImage.png");
-            if (File.Exists(tmpFileName))
-                File.Delete(tmpFileName);
-            // Add the series to the chart. 
-            ((IChartContainer)WebChartControl1).Chart.ExportToImage(tmpFileName, System.Drawing.Imaging.ImageFormat.Png);
-
-            using (var fs = new FileStream(tmpFileName, FileMode.Open, FileAccess.Read))
+            using (var chart = new ChartControl())
             {
-                return Image.FromStream(fs);
+                var series1 = new Series("Series 1", ViewType.Line);
+                series1.Points.AddRange(Parameters.SeriaData.Select(p => new SeriesPoint(p.Key,p.Value)).ToArray());
+                chart.Series.Add(series1);
+                using (var stream = new MemoryStream())
+                {
+                    chart.ExportToImage(stream, ImageFormat.Png);
+                    return Image.FromStream(stream);
+                }
             }
         }
     }
