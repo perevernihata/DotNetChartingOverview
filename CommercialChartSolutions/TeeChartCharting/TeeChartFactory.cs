@@ -1,8 +1,10 @@
-﻿using System;
-using ChartingCore;
+﻿using ChartingCore;
 
 namespace TeeChartCharting
 {
+    /// <summary>
+    /// You can download trial Tee chart binaries from here: https://www.steema.com/download/net
+    /// </summary>
     public class TeeChartFactory: BaseChartFactory
     {
         public override IChartAdapter DoGenerateChart(ChartParameters parameters)

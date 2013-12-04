@@ -5,6 +5,9 @@ using Steema.TeeChart.Styles;
 
 namespace TeeChartCharting
 {
+    /// <summary>
+    /// You can download trial Tee chart binaries from here: https://www.steema.com/download/net
+    /// </summary>
     public class TeeChartAdapter: BaseChartAdapter
     {
         public TeeChartAdapter(ChartParameters parameters) : base(parameters)
