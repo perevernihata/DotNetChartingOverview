@@ -22,5 +22,10 @@ namespace FreeChartTools.FreeCharting.WebCharting
         {
             get { return "http://www.carlosag.net/tools/webchart/"; }
         }
+
+        public override bool IsCommercialSolution
+        {
+            get { return false; }
+        }
     }
 }

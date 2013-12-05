@@ -22,5 +22,10 @@ namespace FreeChartTools.FreeCharting.NPlotCharting
         {
             get { return "http://sourceforge.net/projects/nplot/"; }
         }
+
+        public override bool IsCommercialSolution
+        {
+            get { return false; }
+        }
     }
 }

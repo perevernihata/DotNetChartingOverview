@@ -21,5 +21,11 @@ namespace FreeChartTools.FreeCharting.DisLinCharting
         {
             get { return "http://www.mps.mpg.de/dislin/dotnet.html"; }
         }
+
+        public override bool IsCommercialSolution
+        {
+            get { return false; }
+        }
+
     }
 }

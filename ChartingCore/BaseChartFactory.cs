@@ -7,6 +7,8 @@ namespace ChartingCore
         public abstract IChartAdapter DoGenerateChart(ChartParameters parameters);
 
 
+        public virtual bool IsCommercialSolution { get; private set; }
+
         public Guid Id
         {
             get { return GetType().GUID; }
@@ -14,7 +16,10 @@ namespace ChartingCore
 
         public IChartAdapter GenerateChart(ChartParameters parameters)
         {
-            return DoGenerateChart(parameters);
+            var adapter = DoGenerateChart(parameters);
+            adapter.Owner = this;            
+            IsCommercialSolution = true;
+            return adapter;
         }
 
         public abstract string ChartTypeName { get; }

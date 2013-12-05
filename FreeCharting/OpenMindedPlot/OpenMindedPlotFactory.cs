@@ -21,5 +21,10 @@ namespace FreeChartTools.FreeCharting.OpenMindedPlot
         {
             get { return "https://bitbucket.org/openminded/plot"; }
         }
+
+        public override bool IsCommercialSolution
+        {
+            get { return false; }
+        }
     }
 }

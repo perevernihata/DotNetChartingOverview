@@ -23,5 +23,10 @@ namespace FreeChartTools.FreeCharting.ZedGraph
         {
             get { return "http://sourceforge.net/projects/zedgraph/"; }
         }
+
+        public override bool IsCommercialSolution
+        {
+            get { return false; }
+        }
     }
 }
