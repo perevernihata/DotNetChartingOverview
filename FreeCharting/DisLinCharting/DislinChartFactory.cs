@@ -16,5 +16,10 @@ namespace FreeChartTools.FreeCharting.DisLinCharting
         {
             get { return "Dislin charts"; }
         }
+
+        public override string DownloadLink
+        {
+            get { return "http://www.mps.mpg.de/dislin/dotnet.html"; }
+        }
     }
 }

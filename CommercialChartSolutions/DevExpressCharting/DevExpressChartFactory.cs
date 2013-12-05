@@ -16,5 +16,10 @@ namespace DevExpressCharting
         {
             get { return "DevExpress"; }
         }
+
+        public override string DownloadLink
+        {
+            get { return "https://www.devexpress.com/Home/try.xml"; }
+        }
     }
 }

@@ -67,7 +67,15 @@
                     <asp:Literal runat="server">Select charting solution:</asp:Literal>
                 </td>
                 <td>
-                    <asp:DropDownList ID="dblFactories" runat="server" />
+                    <asp:DropDownList AutoPostBack="True" OnSelectedIndexChanged="OnSelectedIndexChanged" ID="dblFactories" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Literal runat="server">Download link:</asp:Literal>
+                </td>
+                <td>
+                    <asp:HyperLink runat="server" ID="lbDownloadLink"></asp:HyperLink>
                 </td>
             </tr>
             <tr>

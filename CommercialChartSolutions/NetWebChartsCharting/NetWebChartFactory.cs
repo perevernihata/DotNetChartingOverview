@@ -16,5 +16,10 @@ namespace NetWebChartsCharting
         {
             get { return "ChartDirector"; }
         }
+
+        public override string DownloadLink
+        {
+            get { return "http://www.advsofteng.com/download.html"; }
+        }
     }
 }

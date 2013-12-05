@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
+using System.IO;
 
 namespace ChartingCore
 {
@@ -13,7 +15,15 @@ namespace ChartingCore
         protected abstract Image DoCreateChartImage();
         public Image CreateChartImage()
         {
+            try
+            {
                 return DoCreateChartImage();
+            }
+            catch (FileNotFoundException e)
+            {
+                var tmpImage = new Bitmap(Parameters.ChartWidth, Parameters.ChartWidth);
+                return tmpImage;
+            }
         }
 
     }

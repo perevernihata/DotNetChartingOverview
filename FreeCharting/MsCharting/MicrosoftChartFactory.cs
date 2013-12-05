@@ -13,5 +13,10 @@ namespace FreeChartTools.FreeCharting.MsCharting
         {
             get { return "Microsoft Chart Controls"; }
         }
+
+        public override string DownloadLink
+        {
+            get { return "http://www.microsoft.com/ru-ru/download/details.aspx?id=14422"; }
+        }
     }
 }

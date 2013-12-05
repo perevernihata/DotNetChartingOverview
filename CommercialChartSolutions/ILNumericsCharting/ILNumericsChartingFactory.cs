@@ -16,5 +16,10 @@ namespace ILNumericsCharting
         {
             get { return "ILNumerics"; }
         }
+
+        public override string DownloadLink
+        {
+            get { return "http://ilnumerics.net/download-ilnumerics.html"; }
+        }
     }
 }

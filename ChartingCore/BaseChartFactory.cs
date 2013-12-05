@@ -6,6 +6,7 @@ namespace ChartingCore
     {
         public abstract IChartAdapter DoGenerateChart(ChartParameters parameters);
 
+
         public Guid Id
         {
             get { return GetType().GUID; }
@@ -17,5 +18,6 @@ namespace ChartingCore
         }
 
         public abstract string ChartTypeName { get; }
+        public abstract string DownloadLink { get; }
     }
 }

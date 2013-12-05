@@ -17,5 +17,10 @@ namespace ChartFXCharting
         {
             get { return "Chart FX"; }
         }
+
+        public override string DownloadLink
+        {
+            get { return "http://www.softwarefx.com/sfxnetproducts/cfxlitefornet/"; }
+        }
     }
 }

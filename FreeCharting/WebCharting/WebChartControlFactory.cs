@@ -17,5 +17,10 @@ namespace FreeChartTools.FreeCharting.WebCharting
         {
             get { return "Web Chart Control"; }
         }
+
+        public override string DownloadLink
+        {
+            get { return "http://www.carlosag.net/tools/webchart/"; }
+        }
     }
 }

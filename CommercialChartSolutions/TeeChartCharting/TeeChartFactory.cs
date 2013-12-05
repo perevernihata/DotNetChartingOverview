@@ -16,5 +16,10 @@ namespace TeeChartCharting
         {
             get { return "Tee charts"; }
         }
+
+        public override string DownloadLink
+        {
+            get { return "https://www.steema.com/download/net"; }
+        }
     }
 }

@@ -40,10 +40,11 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="Telerik.Charting">
-      <HintPath>..\..\..\..\..\..\..\..\Desktop\Telerik.Charting.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Telerik.Charting.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Web.UI">
-      <HintPath>..\..\..\..\..\..\..\..\Desktop\Telerik.Web.UI.dll</HintPath>
+    <Reference Include="Telerik.Web.UI, Version=2008.2.1001.20, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\Telerik.Web.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

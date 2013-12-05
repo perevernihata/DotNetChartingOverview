@@ -17,5 +17,10 @@ namespace FreeChartTools.FreeCharting.NPlotCharting
         {
             get { return "NPlot"; }
         }
+
+        public override string DownloadLink
+        {
+            get { return "http://sourceforge.net/projects/nplot/"; }
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace TelerikCharting
         {
             get { return "Telerik charts"; }
         }
+
+        public override string DownloadLink
+        {
+            get { return "http://www.telerik.com/products/aspnet-ajax/chart.aspx"; }
+        }
     }
 }

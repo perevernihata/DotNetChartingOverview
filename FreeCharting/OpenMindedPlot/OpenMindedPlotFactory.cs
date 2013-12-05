@@ -16,5 +16,10 @@ namespace FreeChartTools.FreeCharting.OpenMindedPlot
         {
             get { return "Open minded plot"; }
         }
+
+        public override string DownloadLink
+        {
+            get { return "https://bitbucket.org/openminded/plot"; }
+        }
     }
 }

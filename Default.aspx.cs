@@ -10,9 +10,10 @@ namespace FreeChartTools
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack) return;
-            foreach (var factory in FactoriesCollection.Instance)
-                dblFactories.Items.Add(new ListItem(factory.ChartTypeName, factory.Id.ToString()));
+            if (!IsPostBack)
+                foreach (var factory in FactoriesCollection.Instance)
+                    dblFactories.Items.Add(new ListItem(factory.ChartTypeName, factory.Id.ToString()));
+            OnSelectedIndexChanged(this, new EventArgs());
         }
 
         protected void BtnClick(object sender, EventArgs e)
@@ -138,6 +139,12 @@ namespace FreeChartTools
             public double Time { get; set; }
             public int Iterations { get; set; }
             public double Average { get { return Iterations == 0 ? 0 : Time / Iterations; } }
+        }
+
+        protected void OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbDownloadLink.NavigateUrl = CurrentFactory.DownloadLink;
+            lbDownloadLink.Text = CurrentFactory.DownloadLink;
         }
     }
 }

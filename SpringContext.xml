@@ -17,12 +17,12 @@
 
                 <!--Commercial && Proprietary solutions-->
 
-                <!--<ref object="ChartFxFactory"/>-->
-                <!--<ref object="DevExpressFactory"/>-->
-                <!--<ref object="TelerikFactory"/>-->
-                <!--<ref object="TeeChartFactory"/>-->
-                <!--<ref object="ChartDirectorFactory"/>-->
-                <!--<ref object="ILNumericsFactory"/>-->
+                <ref object="ChartFxFactory"/>
+                <ref object="DevExpressFactory"/>
+                <ref object="TelerikFactory"/>
+                <ref object="TeeChartFactory"/>
+                <ref object="ChartDirectorFactory"/>
+                <ref object="ILNumericsFactory"/>
             </list>
         </constructor-arg>
     </object>
@@ -40,11 +40,10 @@
     
     <!--Commercial && Proprietary solutions-->
     
-    <!--<object name="ChartFxFactory" type="ChartFXCharting.ChartFxFactory, ChartFXCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
-    <!--<object name="DevExpressFactory" type="DevExpressCharting.DevExpressChartFactory, DevExpressCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
-    <!--<object name="TelerikFactory" type="TelerikCharting.TelerikChartFactory, TelerikCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
-    <!--<object name="TeeChartFactory" type="TeeChartCharting.TeeChartFactory, TeeChartCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
-    <!--<object name="ChartDirectorFactory" type="NetWebChartsCharting.NetWebChartFactory, NetWebChartsCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
-    <!--<object name="ILNumericsFactory" type="ILNumericsCharting.ILNumericsChartingFactory, ILNumericsCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
-    
+    <object name="ChartFxFactory" type="ChartFXCharting.ChartFxFactory, ChartFXCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />
+    <object name="DevExpressFactory" type="DevExpressCharting.DevExpressChartFactory, DevExpressCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />
+    <object name="TelerikFactory" type="TelerikCharting.TelerikChartFactory, TelerikCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />
+    <object name="TeeChartFactory" type="TeeChartCharting.TeeChartFactory, TeeChartCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />
+    <object name="ChartDirectorFactory" type="NetWebChartsCharting.NetWebChartFactory, NetWebChartsCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />
+    <object name="ILNumericsFactory" type="ILNumericsCharting.ILNumericsChartingFactory, ILNumericsCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />
 </objects>

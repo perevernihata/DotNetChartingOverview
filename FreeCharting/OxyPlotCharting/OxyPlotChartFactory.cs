@@ -17,5 +17,10 @@ namespace FreeChartTools.FreeCharting.OxyPlotCharting
         {
             get { return "Oxy Plot"; }
         }
+
+        public override string DownloadLink
+        {
+            get { return "http://oxyplot.codeplex.com/releases/view/76035"; }
+        }
     }
 }

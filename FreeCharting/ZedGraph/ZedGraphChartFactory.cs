@@ -18,5 +18,10 @@ namespace FreeChartTools.FreeCharting.ZedGraph
         {
             get { return "Zed Graph"; }
         }
+
+        public override string DownloadLink
+        {
+            get { return "http://sourceforge.net/projects/zedgraph/"; }
+        }
     }
 }
