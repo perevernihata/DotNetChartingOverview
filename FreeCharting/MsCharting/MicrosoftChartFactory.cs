@@ -19,9 +19,9 @@ namespace FreeChartTools.FreeCharting.MsCharting
             get { return "http://www.microsoft.com/ru-ru/download/details.aspx?id=14422"; }
         }
 
-        public override bool IsCommercialSolution
+        public override SolutionType SolutionType
         {
-            get { return false; }
+            get { return SolutionType.Free; }
         }
     }
 }

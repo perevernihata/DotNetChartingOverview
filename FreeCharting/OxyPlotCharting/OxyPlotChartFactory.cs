@@ -23,9 +23,9 @@ namespace FreeChartTools.FreeCharting.OxyPlotCharting
             get { return "http://oxyplot.codeplex.com/releases/view/76035"; }
         }
 
-        public override bool IsCommercialSolution
+        public override SolutionType SolutionType
         {
-            get { return false; }
+            get { return SolutionType.Free; }
         }
     }
 }

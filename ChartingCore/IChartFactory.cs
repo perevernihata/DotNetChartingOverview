@@ -2,12 +2,19 @@
 
 namespace ChartingCore
 {
+    public enum SolutionType
+    {
+        Free,
+        Commercial,
+        Any
+    }
+
     public interface IChartFactory
     {
         IChartAdapter GenerateChart(ChartParameters parameters);
         string ChartTypeName { get; }
         string DownloadLink { get; }
-        bool IsCommercialSolution { get; }
+        SolutionType SolutionType { get; }
         Guid Id { get; }
     }
 }

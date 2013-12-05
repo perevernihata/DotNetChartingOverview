@@ -67,6 +67,7 @@
                     <asp:Literal runat="server">Select charting solution:</asp:Literal>
                 </td>
                 <td>
+                    <asp:DropDownList AutoPostBack="True" OnSelectedIndexChanged="SolutionTypesSelectedIndexChanged" ID="dblSolutionTypes" runat="server" />
                     <asp:DropDownList AutoPostBack="True" OnSelectedIndexChanged="OnSelectedIndexChanged" ID="dblFactories" runat="server" />
                 </td>
             </tr>

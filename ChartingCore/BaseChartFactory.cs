@@ -7,18 +7,22 @@ namespace ChartingCore
         public abstract IChartAdapter DoGenerateChart(ChartParameters parameters);
 
 
-        public virtual bool IsCommercialSolution { get; private set; }
+        public virtual SolutionType SolutionType { get; private set; }
 
         public Guid Id
         {
             get { return GetType().GUID; }
         }
 
+        protected BaseChartFactory()
+        {
+            SolutionType = SolutionType.Commercial;
+        }
+
         public IChartAdapter GenerateChart(ChartParameters parameters)
         {
             var adapter = DoGenerateChart(parameters);
-            adapter.Owner = this;            
-            IsCommercialSolution = true;
+            adapter.Owner = this;
             return adapter;
         }
 

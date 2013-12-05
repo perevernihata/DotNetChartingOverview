@@ -11,8 +11,13 @@ namespace FreeChartTools
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
+            {
+                dblSolutionTypes.Items.Add(new ListItem("Any", SolutionType.Any.ToString()));
+                dblSolutionTypes.Items.Add(new ListItem("Free", SolutionType.Free.ToString()));
+                dblSolutionTypes.Items.Add(new ListItem("Commercial", SolutionType.Commercial.ToString()));
                 foreach (var factory in FactoriesCollection.Instance)
                     dblFactories.Items.Add(new ListItem(factory.ChartTypeName, factory.Id.ToString()));
+            }
             OnSelectedIndexChanged(this, new EventArgs());
         }
 
@@ -25,6 +30,19 @@ namespace FreeChartTools
         private IChartFactory CurrentFactory
         {
             get { return FactoriesCollection.Instance.SingleOrDefault(f => f.Id == new Guid(dblFactories.SelectedValue)); }
+        }
+
+        private IEnumerable<IChartFactory> FilteredFactories
+        {
+            get
+            {
+                var selectedSolutionType = dblSolutionTypes.SelectedItem.Value;
+                return
+                    FactoriesCollection.Instance.Where(
+                        f =>
+                        f.SolutionType.ToString() == selectedSolutionType ||
+                        selectedSolutionType == SolutionType.Any.ToString());
+            }
         }
 
         private int CurrentIteration
@@ -69,7 +87,7 @@ namespace FreeChartTools
         private void RefillStatistic()
         {
             Statistic.Clear();
-            foreach (var factory in FactoriesCollection.Instance)
+            foreach (var factory in FilteredFactories)
             {
                 Statistic.Add(new ChartPerformanceInfo
                     {
@@ -145,6 +163,13 @@ namespace FreeChartTools
         {
             lbDownloadLink.NavigateUrl = CurrentFactory.DownloadLink;
             lbDownloadLink.Text = CurrentFactory.DownloadLink;
+        }
+
+        protected void SolutionTypesSelectedIndexChanged(object sender, EventArgs e)
+        {
+            dblFactories.Items.Clear();
+            foreach (var factory in FilteredFactories)
+                dblFactories.Items.Add(new ListItem(factory.ChartTypeName, factory.Id.ToString()));
         }
     }
 }

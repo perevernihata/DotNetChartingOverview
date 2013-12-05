@@ -22,9 +22,9 @@ namespace FreeChartTools.FreeCharting.OpenMindedPlot
             get { return "https://bitbucket.org/openminded/plot"; }
         }
 
-        public override bool IsCommercialSolution
+        public override SolutionType SolutionType
         {
-            get { return false; }
+            get { return SolutionType.Free; }
         }
     }
 }

@@ -22,9 +22,9 @@ namespace FreeChartTools.FreeCharting.GoogleSharpCharting
             get { return "https://code.google.com/p/googlechartsharp/"; }
         }
 
-        public override bool IsCommercialSolution
+        public override SolutionType SolutionType
         {
-            get { return false; }
+            get { return SolutionType.Free; }
         }
     }
 }

@@ -34,7 +34,7 @@ namespace ChartingCore
                     var rectf = new RectangleF(Parameters.ChartWidth * 0.1f, Parameters.ChartHeight * 0.1f, Parameters.ChartWidth * 0.9f, Parameters.ChartHeight * 0.9f);
                     var downloadLinkStr = Owner == null ? String.Empty : String.Format(" from '{0}'", Owner.DownloadLink);
                     var commercialMessage = "";
-                    if (Owner != null && Owner.IsCommercialSolution)
+                    if (Owner != null && Owner.SolutionType == SolutionType.Commercial)
                         commercialMessage = "Since this is commercial solution, we are not able to ship it with this project. You should download it by yourself.";
                     g.DrawString(String.Format(AssemblyMissingMessage, e.FileName, downloadLinkStr, commercialMessage), new Font("Arial", 11), Brushes.Black, rectf);
                     g.Flush();
