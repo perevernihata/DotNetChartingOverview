@@ -3,6 +3,9 @@
     <object name="CurrentFactoriesCollection" type="FreeChartTools.FactoriesCollection, FreeChartTools, Version=1.0.0.0, Culture=neutral">
         <constructor-arg>
             <list element-type="ChartingCore.IChartFactory, ChartingCore, Version=1.0.0.0, Culture=neutral">
+                
+                <!--Free && Open source solutions-->
+
                 <ref object="DisLinChartingFactory"/>
                 <ref object="GoogleSharpChartingFactory"/>
                 <ref object="MsChartingFactory"/>
@@ -11,14 +14,21 @@
                 <ref object="WebChartControlFactory"/>
                 <ref object="ZedGraphChartFactory"/>
                 <ref object="OpenMindedPlotFactory"/>
+
+                <!--Commercial && Proprietary solutions-->
+
                 <!--<ref object="ChartFxFactory"/>-->
                 <!--<ref object="DevExpressFactory"/>-->
                 <!--<ref object="TelerikFactory"/>-->
                 <!--<ref object="TeeChartFactory"/>-->
                 <!--<ref object="ChartDirectorFactory"/>-->
+                <!--<ref object="ILNumericsFactory"/>-->
             </list>
         </constructor-arg>
     </object>
+    
+    <!--Free && Open source solutions-->
+    
     <object name="DisLinChartingFactory" type="FreeChartTools.FreeCharting.DisLinCharting.DislinChartFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
     <object name="GoogleSharpChartingFactory" type="FreeChartTools.FreeCharting.GoogleSharpCharting.GoogleSharpChartFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
     <object name="MsChartingFactory" type="FreeChartTools.FreeCharting.MsCharting.MicrosoftChartFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
@@ -27,10 +37,14 @@
     <object name="WebChartControlFactory" type="FreeChartTools.FreeCharting.WebCharting.WebChartControlFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
     <object name="ZedGraphChartFactory" type="FreeChartTools.FreeCharting.ZedGraph.ZedGraphChartFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
     <object name="OpenMindedPlotFactory" type="FreeChartTools.FreeCharting.OpenMindedPlot.OpenMindedPlotFactory, FreeChartTools, Version=1.0.0.0, Culture=neutral" singleton="false" />
+    
+    <!--Commercial && Proprietary solutions-->
+    
     <!--<object name="ChartFxFactory" type="ChartFXCharting.ChartFxFactory, ChartFXCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
     <!--<object name="DevExpressFactory" type="DevExpressCharting.DevExpressChartFactory, DevExpressCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
     <!--<object name="TelerikFactory" type="TelerikCharting.TelerikChartFactory, TelerikCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
     <!--<object name="TeeChartFactory" type="TeeChartCharting.TeeChartFactory, TeeChartCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
     <!--<object name="ChartDirectorFactory" type="NetWebChartsCharting.NetWebChartFactory, NetWebChartsCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
+    <!--<object name="ILNumericsFactory" type="ILNumericsCharting.ILNumericsChartingFactory, ILNumericsCharting, Version=1.0.0.0, Culture=neutral" singleton="false" />-->
     
 </objects>
