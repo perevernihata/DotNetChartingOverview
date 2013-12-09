@@ -24,6 +24,8 @@ namespace DevExpressCharting
                 var series1 = new Series("Series 1", ViewType.Line);
                 series1.Points.AddRange(Parameters.SeriaData.Select(p => new SeriesPoint(p.Key,p.Value)).ToArray());
                 chart.Series.Add(series1);
+                chart.Width = Parameters.ChartWidth;
+                chart.Height = Parameters.ChartHeight;
                 using (var stream = new MemoryStream())
                 {
                     chart.ExportToImage(stream, ImageFormat.Png);
