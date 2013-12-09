@@ -22,19 +22,18 @@ namespace ChartFXCharting
                     Height = Parameters.ChartHeight
                 };
             chart.Gallery = SoftwareFX.ChartFX.Lite.Gallery.Lines;            
-            var result = new Bitmap(Parameters.ChartWidth, Parameters.ChartHeight);
-            chart.DrawToBitmap(result, new Rectangle(0, 0, Parameters.ChartWidth, Parameters.ChartHeight));
             var ts = new DataTable();
             ts.Columns.Add(new DataColumn("x", typeof(int)));
-            ts.Columns.Add(new DataColumn("y", typeof(int)));
             foreach (var pair in Parameters.SeriaData)
             {
                 var row = ts.NewRow();
-                row[0] = pair.Key;
-                row[1] = pair.Value;
+                row[0] = pair.Value;
                 ts.Rows.Add(row);
             }
+            chart.DataSource = ts;
             chart.RecalcScale();
+            var result = new Bitmap(Parameters.ChartWidth, Parameters.ChartHeight);
+            chart.DrawToBitmap(result, new Rectangle(0, 0, Parameters.ChartWidth, Parameters.ChartHeight));
             return result;
         }
     }
